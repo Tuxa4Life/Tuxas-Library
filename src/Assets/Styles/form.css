@@ -1,0 +1,50 @@
+.ui.container {
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(243, 243, 243, 0.352);
+    /* border: 1px black solid; */
+    border-radius: 7px;
+    background-color: white;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+}
+
+.ui.form {
+    width: 450px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.ui.form .title {
+    margin: 15px 0;
+}
+
+.field {
+    min-width: 300px;
+    margin: 10px;
+}
+
+.ui.submit.button, .ui.form span {
+    margin: 20px;
+}
+
+.form-btn-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.form-btn-holder button {
+    margin: 5px 0 !important;
+}
