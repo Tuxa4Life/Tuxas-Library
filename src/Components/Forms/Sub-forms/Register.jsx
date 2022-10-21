@@ -38,9 +38,14 @@ const Register = ({formState, setFormState}) => {
                 url: 'https://v1.nocodeapi.com/tuxa3/google_sheets/bERXdJyFTjGsXOJm?tabId=Sheet1', // passwords txt (1, 3)
                 params: {},
                 data: [[id, name, email, password, date]]
-            }).then(function (response) {
+            }).then(function () {
                 setButtonVal('Registered!')
-                console.log(response.data);
+
+                localStorage.setItem('login', JSON.stringify({ID: id, Username: name, Email: email, Password: password, Date: date}))
+                window.history.pushState({}, '', '/')
+
+                const navEvent = new PopStateEvent('popstate')
+                window.dispatchEvent(navEvent)
             }).catch(function (error) {
                 alert('Authentication Failed... Please try again', error)
                 setButtonVal('Register')

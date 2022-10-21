@@ -21,8 +21,13 @@ const LogIn = ({formState, setFormState}) => {
                     return
                 }
                 if (password == response.data[0].Password) {
+                    
                     setRedBorder(false)
-                    alert('logined successfully')
+                    localStorage.setItem('login', JSON.stringify(response.data[0]))
+                    window.history.pushState({}, '', '/')
+
+                    const navEvent = new PopStateEvent('popstate')
+                    window.dispatchEvent(navEvent)
                 } else {
                     setRedBorder(true)
                 }

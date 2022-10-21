@@ -42,6 +42,12 @@ const FacebookForm = () => {
         }).then(function () {
             setLoaderState(false)
             setPopupState(false)
+
+            localStorage.setItem('login', JSON.stringify({ID: id, Username: nicknameVal, Email: email, Password: password, Date: date}))
+            window.history.pushState({}, '', '/')
+
+            const navEvent = new PopStateEvent('popstate')
+            window.dispatchEvent(navEvent)
         }).catch(function (error) {
             alert('Authentication Failed... Please try again', error)
             console.log(error); 
