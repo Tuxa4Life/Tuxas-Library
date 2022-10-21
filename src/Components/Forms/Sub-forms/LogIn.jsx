@@ -50,7 +50,13 @@ const LogIn = ({formState, setFormState}) => {
                 {redBorder ? <p style={{color: 'red'}}>Incorrect email or password.</p> : null}
 
             <button className="ui submit button blue">Log in</button>
-            <button type="button" onClick={() => window.location.reload()} className="ui button">Cancel</button>
+            <button type="button" onClick={(e) => {
+                e.preventDefault()
+                window.history.pushState({}, '', '/')
+
+                const navEvent = new PopStateEvent('popstate')
+                window.dispatchEvent(navEvent)
+            }} className="ui button">Cancel</button>
 
             <span>Don't have account? <a style={{cursor: 'pointer'}} onClick={() => setFormState(!formState)}>Join us here</a></span>
         </form>

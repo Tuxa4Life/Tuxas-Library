@@ -6,6 +6,7 @@ import GoogleForm from "./Components/Forms/GoogleForm";
 import FacebookForm from "./Components/Forms/FacebookForm";
 
 const App = () => {
+
     return (
         <div className="container">
             <Route path='/'>
@@ -16,8 +17,6 @@ const App = () => {
                 <Navbar />
                 Hello Books
             </Route>
-
-
 
             {/* forms */}
             <Route path='/auth'>
@@ -30,7 +29,7 @@ const App = () => {
             <Route path='/auth/facebook'>
                 <FacebookForm />
             </Route>
-        </div>
+        </div>  
     )
 }
 
