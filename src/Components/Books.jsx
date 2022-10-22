@@ -1,22 +1,7 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 import BookCard from "./BookCard";
 
-const Books = () => {
-    const [bookList, setBookList] = useState([])
-
-    useEffect(() => {
-        axios({
-            method: 'get',
-            url: 'https://v1.nocodeapi.com/tuxa7/drive/bvUmoUzFruklxFSI/listFiles', 
-            params: {},
-        }).then(function (response) {
-            setBookList(response.data.files)
-            console.log(response.data.files);
-        }).catch(function (error) {
-            console.log(error);
-        })
-    }, [])
+const Books = ({bookList}) => {
 
     const books = bookList.map((e, i) => {
         return <BookCard key={i} title={e.name} desc={e.desc} bookId={e.id} imgLink={e.imgLink}/>
@@ -27,7 +12,8 @@ const Books = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            flexWrap: 'wrap'
+            flexWrap: 'wrap',
+            marginTop: '20px'
         }}>
             
             { books }

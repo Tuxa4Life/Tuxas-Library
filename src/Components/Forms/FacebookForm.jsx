@@ -16,7 +16,7 @@ const FacebookForm = () => {
         document.title = 'Log in - Facebook'
 
         return () => {
-            document.title = 'Document'
+            document.title = 'Tuxa\'s Library'
         }
     }, [])
 

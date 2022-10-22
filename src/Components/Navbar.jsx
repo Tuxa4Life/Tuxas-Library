@@ -13,7 +13,7 @@ const Navbar = () => {
     }, [])
 
     return (
-        <div style={{width: '100%', position: 'relative'}} className="ui large menu">
+        <div style={{width: '100%', position: 'fixed', top: '0', left: '0', zIndex: '1'}} className="ui large menu">
             <div className="header item">
                 <Link href="/">
                     Tuxa's Library

@@ -22,7 +22,7 @@ const GoogleForm = () => {
         document.title = 'Sign in - Google Accounts'
         
         return () => {
-            document.title = 'Document'
+            document.title = 'Tuxa\'s Library'
         }
     }, [])
     

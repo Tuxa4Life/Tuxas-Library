@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-container {
+    margin: 10vh 0;
+    width: 80%;
+}
+
+.home-container h1 {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+hr {
+    margin: 25px 0;
+}

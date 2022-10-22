@@ -11,7 +11,7 @@ const MainForm = () => {
         document.title = 'Authorization'
 
         return () => {
-            document.title = 'Document'
+            document.title = 'Tuxa\'s Library'
         }
     }, [])
 
