@@ -8,7 +8,7 @@ const Books = ({bookList}) => {
     })
 
     return (
-        <div className="ui cards" style={{
+        <div className="ui cards bookholder" style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',

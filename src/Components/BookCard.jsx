@@ -14,7 +14,7 @@ const BookCard = ({title, desc, imgLink, bookId}) => {
     }
 
     return (
-        <div className="ui card" style={{margin: '7px'}}>
+        <div className="ui card book-card" style={{margin: '7px'}}>
             <div className="image">
                 <img src={imgLink} />
             </div>

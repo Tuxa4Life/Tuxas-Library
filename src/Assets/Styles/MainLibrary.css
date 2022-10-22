@@ -1,4 +1,7 @@
 .library-container {
     margin: 10vh 0;
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

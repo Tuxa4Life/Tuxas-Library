@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import Books from "./Books";
 import styles from '../Assets/Styles/MainLibrary.css'
+import SearchBar from "./SearchBar";
 
 const MainLibraryPage = ({books, setBooks}) => {
 
@@ -22,6 +23,7 @@ const MainLibraryPage = ({books, setBooks}) => {
 
     return (
         <div style={styles} className="library-container">
+            <SearchBar />
             <Books bookList={books}/>
         </div>
     )
