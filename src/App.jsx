@@ -4,6 +4,7 @@ import Route from './Components/Route';
 import MainForm from "./Components/Forms/MainForm";
 import GoogleForm from "./Components/Forms/GoogleForm";
 import FacebookForm from "./Components/Forms/FacebookForm";
+import Books from "./Components/Books";
 
 const App = () => {
 
@@ -11,12 +12,14 @@ const App = () => {
         <div className="container">
             <Route path='/'>
                 <Navbar />
-                Hello Home
+                <Books />
             </Route>
             <Route path='/books'>
                 <Navbar />
                 Hello Books
             </Route>
+
+    
 
             {/* forms */}
             <Route path='/auth'>

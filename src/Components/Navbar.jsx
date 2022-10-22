@@ -3,16 +3,12 @@ import Alert from "./Alert";
 import Link from "./Link";
 
 const Navbar = () => {
-    const [loginVal, setLoginVal] = useState(false)
     const [loginData, setLoginData] = useState({})
     const [profileAlert, setProfileAlert] = useState(false)
     
     useEffect(() => {
         if (localStorage.getItem('login')) {
-            setLoginVal(true)
             setLoginData(JSON.parse(localStorage.getItem('login')))
-        } else {
-            setLoginVal(false)
         }
     }, [])
 
@@ -30,13 +26,16 @@ const Navbar = () => {
                 Books
             </Link>
 
-            <Link href={loginVal ? window.location.pathname : '/auth'}>
-                <button className='ui button primary' style={{
+            <Link href={localStorage.getItem('login') ? window.location.pathname : '/auth'}>
+                <button className='ui button icon primary' style={{
                     position: 'absolute',
                     top: '10%',
                     right: '2%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center'
                 }} onClick={() => setProfileAlert(true)}>
-                    {loginVal ? 'Profile' : 'Login'}
+                    <i className="icon user"></i>
                 </button>
             </Link>
 

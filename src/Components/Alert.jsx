@@ -11,7 +11,8 @@ const Alert = ({data, children, closeFunc}) => {
             backdropFilter: 'blur(5px)',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            zIndex: '2'
         }}>
             <div className="ui card">
                 <div className="content">
