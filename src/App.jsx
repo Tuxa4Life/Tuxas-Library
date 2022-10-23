@@ -1,13 +1,17 @@
-import React, {useState} from "react";
-import axios from "axios";
-import Navbar from "./Components/Navbar";
+import React, { useState } from "react";
+
 import Route from './Components/Route';
+
+import Navbar from "./Components/Navbar";
+import MainLibraryPage from "./Components/MainLibraryPage";
+import BookmarkIcon from "./Components/BookmarkIcon";
+import Books from "./Components/Books";
+
 import MainForm from "./Components/Forms/MainForm";
 import GoogleForm from "./Components/Forms/GoogleForm";
 import FacebookForm from "./Components/Forms/FacebookForm";
-import Books from "./Components/Books";
+
 import styles from './Assets/Styles/home.css'
-import MainLibraryPage from "./Components/MainLibraryPage";
 
 const App = () => {
     const [bookList, setBookList] = useState([])
@@ -38,6 +42,8 @@ const App = () => {
         },
     ])
 
+    const [bookmarks, setBookmarks] = useState(JSON.parse(localStorage.getItem('bookmarks')))
+
     return (
         <div style={styles} className="container">
             <Route path='/'>
@@ -47,10 +53,17 @@ const App = () => {
                     <Books bookList={popularList}/>
                     <hr />
                 </div>
+                <BookmarkIcon  updateList={setBookmarks}/>
             </Route>
             <Route path='/books'>
                 <Navbar />
                 <MainLibraryPage setBooks={setBookList} books={bookList}/>
+                <BookmarkIcon  updateList={setBookmarks}/>
+            </Route>
+            <Route path='/bookmarks'>
+                <Navbar />
+                <BookmarkIcon updateList={setBookmarks}/>
+                <Books bookList={bookmarks}/>
             </Route>
 
     
