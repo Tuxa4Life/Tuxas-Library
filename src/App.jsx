@@ -12,7 +12,7 @@ import MainLibraryPage from "./Components/MainLibraryPage";
 const App = () => {
     const [bookList, setBookList] = useState([])
     const [popularList, setPopularList] = useState([
-        {
+        {;l;okjhyh
             name: 'ფეხისტყაოსანი',
             desc: 'შოთა რუსთაველი',
             id: '1cjM3_dC-iS6yTxTV0Q-aiJmCRnLVjumT',
