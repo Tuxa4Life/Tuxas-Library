@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href={localStorage.getItem('login') ? window.location.pathname : '/auth'}>
                 <button className='ui button icon primary' style={{
                     position: 'absolute',
-                    top: '10%',
+                    top: '13%',
                     right: '2%',
                     display: 'flex',
                     alignItems: 'center',

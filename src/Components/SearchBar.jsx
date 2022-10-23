@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-const SearchBar = () => {
-    const [term, setTerm] = useState('')
-
+const SearchBar = ({term, setTerm, search}) => {
     return (
         <div className="ui action input" style={{width: '300px'}}>
             <input type="text" placeholder="Search book" onChange={e => setTerm(e.target.value)} value={term}/>
-            <button className="ui icon button">
+            <button className="ui icon button" onClick={search}>
                 <i className="search icon"></i>
             </button>
         </div>
