@@ -13,7 +13,7 @@ const Books = ({bookList}) => {
             alignItems: 'center',
             justifyContent: 'center',
             flexWrap: 'wrap',
-            marginTop: '20px'
+            marginTop: '7vh'
         }}>
             
             { books }

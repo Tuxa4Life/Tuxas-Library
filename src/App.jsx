@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Route from './Components/Route';
 
@@ -16,7 +16,7 @@ import styles from './Assets/Styles/home.css'
 const App = () => {
     const [bookList, setBookList] = useState([])
     const [popularList, setPopularList] = useState([
-        {;l;okjhyh
+        {
             name: 'ფეხისტყაოსანი',
             desc: 'შოთა რუსთაველი',
             id: '1cjM3_dC-iS6yTxTV0Q-aiJmCRnLVjumT',
@@ -42,8 +42,8 @@ const App = () => {
         },
     ])
 
-    const [bookmarks, setBookmarks] = useState(JSON.parse(localStorage.getItem('bookmarks')))
-
+    const [bookmarks, setBookmarks] = useState([])
+    
     return (
         <div style={styles} className="container">
             <Route path='/'>
@@ -63,7 +63,7 @@ const App = () => {
             <Route path='/bookmarks'>
                 <Navbar />
                 <BookmarkIcon updateList={setBookmarks}/>
-                <Books bookList={bookmarks}/>
+                {localStorage.getItem('bookmarks') ? <Books bookList={bookmarks}/> : null}
             </Route>
 
     
