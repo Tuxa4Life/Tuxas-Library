@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 const BookCard = ({title, desc, imgLink, bookId}) => {
+    const [bookmarkLogo, setBookmarkLogo] = useState(false)
     
     const bookmark = () => {
         if (localStorage.getItem('bookmarks')) {
             let tmp = JSON.parse(localStorage.getItem('bookmarks'))
+            let exists = false
+            let index = null
+
             tmp.map((e, i) => {
                 if (e.id == bookId) {
-                    tmp.splice(i, 1)
+                    index = i
+                    exists = true
                     return
                 }
             })
-            tmp.unshift({name: title, desc: desc, id: bookId})
-            localStorage.setItem('bookmarks', JSON.stringify(tmp))
+            if (exists) {
+                setBookmarkLogo(true)
+                tmp.splice(index, 1)
+                localStorage.setItem('bookmarks', JSON.stringify(tmp))
+            } else {
+                setBookmarkLogo(false)
+                tmp.unshift({name: title, desc: desc, id: bookId})
+                localStorage.setItem('bookmarks', JSON.stringify(tmp))
+            }
         } else {
             let tmp = [{name: title, desc: desc, id: bookId}]
             localStorage.setItem('bookmarks', JSON.stringify(tmp))
@@ -31,7 +43,7 @@ const BookCard = ({title, desc, imgLink, bookId}) => {
                 </div>
             </div>
             <div className="extra content">
-                <button className="ui button icon pink" onClick={bookmark}>
+                <button className={`ui button icon ${ bookmarkLogo ? '' : 'pink' }`} onClick={bookmark}>
                     <i className="icon bookmark"></i>
                 </button>
                 <a className="ui button right floated" target={'_blank'} href={`https://drive.google.com/file/d/${bookId}/view?usp=sharing`}>Open</a>
