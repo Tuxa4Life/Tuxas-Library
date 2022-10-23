@@ -5,10 +5,16 @@ const BookCard = ({title, desc, imgLink, bookId}) => {
     const bookmark = () => {
         if (localStorage.getItem('bookmarks')) {
             let tmp = JSON.parse(localStorage.getItem('bookmarks'))
-            tmp.unshift({title: title, desc: desc, imgLink: imgLink, bookId: bookId})
+            tmp.map((e, i) => {
+                if (e.id == bookId) {
+                    tmp.splice(i, 1)
+                    return
+                }
+            })
+            tmp.unshift({name: title, desc: desc, id: bookId})
             localStorage.setItem('bookmarks', JSON.stringify(tmp))
         } else {
-            let tmp = [{title: title, desc: desc, imgLink: imgLink, bookId: bookId}]
+            let tmp = [{name: title, desc: desc, id: bookId}]
             localStorage.setItem('bookmarks', JSON.stringify(tmp))
         }
     }
