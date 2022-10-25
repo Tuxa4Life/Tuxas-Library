@@ -16,6 +16,7 @@ const MainLibraryPage = ({books, setBooks}) => {
                 params: {},
             }).then(function (response) {
                 setBooks(response.data.files)
+                setTmpBooks([...response.data.files])
                 console.log(response.data.files);
             }).catch(function (error) {
                 console.log(error);
