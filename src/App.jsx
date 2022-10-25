@@ -44,7 +44,7 @@ const App = () => {
 
     const [georgianBooks, setGeorgianBooks] = useState([
         {
-            name: 'მეთერთმეტე კლასი XII',
+            name: 'მეთორმეტე კლასი XII',
             desc: 'ავთანდილ როდონაია',
             id: '1LdXYSANViLIqtXR7tqrt_Q973B4bgeQm',
             imgLink: 'http://www.stavlani.ge/cms/upload/img/1ce15111d5cb8fffd958de7008010e12.jpg'
@@ -56,7 +56,7 @@ const App = () => {
             imgLink: 'http://www.stavlani.ge/cms/upload/img/0ef9d1355abe33e7f833ac065a74c267.jpg'
         },
         {
-            name: 'მეთერთმეტე კლასი X',
+            name: 'მეათე კლასი X',
             desc: 'ავთანდილ როდონაია',
             id: '1wpPijx9CIBD6rqkefxrSYiNEo5UtxTJv',
             imgLink: 'http://www.stavlani.ge/cms/upload/img/bcc8f675126a404bcead0edd32701aff.jpg'
