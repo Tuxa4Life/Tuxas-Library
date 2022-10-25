@@ -27,8 +27,8 @@ const MainLibraryPage = ({books, setBooks}) => {
         setTmpBooks([...books])
         let tmp = []
         books.map(e => {
-            if (e.name.includes(term)) {
-                tmp.push({name: e.name, id: e.id})
+            if (e.name.includes(term) || e.desc.includes(term)) {
+                tmp.push({name: e.name, desc:   e.desc, id: e.id})
             }
         })
         setTmpBooks(tmp)
