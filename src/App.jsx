@@ -19,25 +19,25 @@ const App = () => {
         {
             name: 'ფეხისტყაოსანი',
             desc: 'შოთა რუსთაველი',
-            id: '1cjM3_dC-iS6yTxTV0Q-aiJmCRnLVjumT',
+            id: '1EFr--JAE1Glt3V95gO4C4-7lW_uNTWNX',
             imgLink: 'https://server5.intermedia.ge/pictures/medium/570/570115.jpg?/Shota-Rustaveli-Georgian-poet.jpg'
         },
         {
             name: 'შუშანიკის წამება',
             desc: 'იაკობ ცურტაველი',
-            id: '1PsKbKEdpxWjsDdl4_yjl56T-5e2-9ybb',
+            id: '1RNVHQzTWV2x572dYzwtbRBR5pldrZKl3',
             imgLink: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/Sabinin._St._Shushanik.jpg'
         },
         {
             name: 'დიდოსტატის კონსტანტინეს მარჯვენა',
             desc: 'კონსტანტინე გამსახურდია',
-            id: '1KGcXOwTQzEQBpq1O9MP6RIo8AtRMFgWu',
+            id: '1FpNhouDpmdMkAydr__LZcPVjgOOKpOCg',
             imgLink: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1386421153l/9754154.jpg'
         },
         {
             name: 'ჯაყოს ხიზნები',
             desc: 'მიხეილ ჯავახისვილი',
-            id: '1DkJ9IKsOUzNKBqpeNOvxEVfyb3UgOgbN',
+            id: '1i0ewYjIoXdwTzu3SNHFJ7ZaoeTgw97mc',
             imgLink: 'https://upload.wikimedia.org/wikipedia/ka/thumb/3/33/Jayos_xiznebi_1.jpg/220px-Jayos_xiznebi_1.jpg'
         },
     ])

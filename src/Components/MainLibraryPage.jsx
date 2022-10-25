@@ -12,12 +12,11 @@ const MainLibraryPage = ({books, setBooks}) => {
         if (!books.length) {
             axios({
                 method: 'get',
-                url: 'https://v1.nocodeapi.com/tuxa7/drive/vlnOAbuinqSaTMGt/listFiles',  // ***********7
+                url: 'https://v1.nocodeapi.com/tuxaslibrary/google_sheets/wBfxtQySzxWltzpx?tabId=Sheet1',  // tuxaslibrary
                 params: {},
             }).then(function (response) {
-                setBooks(response.data.files)
-                setTmpBooks([...response.data.files])
-                console.log(response.data.files);
+                setTmpBooks([...response.data.data])
+                setBooks([...response.data.data])
             }).catch(function (error) {
                 console.log(error);
             })
