@@ -72,3 +72,18 @@ export const math = [
         imgLink: 'https://p.calameoassets.com/151017171524-56425b1ba41f86aee86cc2470cc2c0af/p1.jpg'
     },
 ]
+
+export const history = [
+    {
+        name: 'ისტორია 11 კლასი',
+        desc: 'ბაკურ სულაკაურის გამომცემლობა',
+        id: '1MT-dJbM8EApEg7Nriaid8-f14BKDk1rB',
+        imgLink: 'https://i0.wp.com/www.sulakauri.ge/wp-content/uploads/2021/01/istoria-11-mostsavlis-tsigni-natsili2.jpg?fit=600%2C800&ssl=1'
+    },
+    {
+        name: 'ისტორია 12 კლასი',
+        desc: 'ბაკურ სულაკაურის გამომცემლობა',
+        id: '1TP-XHPjW8OnIdGe5sLCLLoneQTdPk_bB',
+        imgLink: 'https://www.citrus.ge/images/products/CS106713/1.jpg'
+    },
+]

@@ -1,6 +1,6 @@
 import React from "react";
 import Books from "./Books";
-import { popular, georgian, math } from '../Assets/HomeLists'
+import { popular, georgian, math, history } from '../Assets/HomeLists'
 
 const Home = () => {
 
@@ -14,6 +14,9 @@ const Home = () => {
             <hr />
             <h1>მათემატიკის ამოცანათა კრებული:</h1>
             <Books bookList={math} />
+            <hr />
+            <h1>ისტორიის სახელმძღვანელოები:</h1>
+            <Books bookList={history} />
         </div>
     )
 }
