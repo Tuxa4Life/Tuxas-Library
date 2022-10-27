@@ -27,8 +27,8 @@ const Popup = (props) => {
                         <i className={`${props.icon} icon`}></i>
                     </div>
                     <div style={{marginTop: '5px'}} className="extra content">
-                        <button onClick={props.onCancelClick} className="ui button">Cancel</button>
-                        <button onClick={props.onSubmitClick} className="ui green button">Submit</button>
+                        <button onClick={props.onCancelClick} className="ui button">დახურვა</button>
+                        <button onClick={props.onSubmitClick} className="ui green button">დადასტურება</button>
                     </div>
                 </div>
             </div>

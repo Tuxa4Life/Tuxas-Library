@@ -20,10 +20,10 @@ const Navbar = () => {
                 </Link>
             </div>
             <Link href='/' className='item'>
-                Home
+                მთავარი
             </Link>
             <Link href='/books' className="item">
-                Books
+                წიგნები
             </Link>
 
             <Link href={localStorage.getItem('login') ? window.location.pathname : '/auth'}>
@@ -40,13 +40,13 @@ const Navbar = () => {
             </Link>
 
             { profileAlert ? 
-                <Alert data={{title: loginData.Username, meta: `User ID: ${loginData.ID}`}} closeFunc={() => setProfileAlert(false)}>
+                <Alert data={{title: loginData.Username, meta: `ID: ${loginData.ID}`}} closeFunc={() => setProfileAlert(false)}>
                     <h4>{loginData.Email}</h4>
-                    <h5>Join Date: {loginData.Date}</h5>
+                    <h5>გაწევრიანების თარიღი: {loginData.Date}</h5>
                     <span style={{textDecoration: 'underline', cursor: 'pointer'}} onClick={() => {
                         localStorage.removeItem('login')
                         window.location.reload()
-                    }}>Log out</span>
+                    }}>ანგარიშიდან გამოსვლა</span>
                 </Alert>
             : null }
         </div>

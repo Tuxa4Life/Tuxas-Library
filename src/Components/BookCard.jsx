@@ -31,6 +31,14 @@ const BookCard = ({title, desc, imgLink, bookId}) => {
         }
     }
 
+    const downloadRedirect = () => {
+        if (localStorage.getItem('login')) {
+            window.location.href = `https://drive.google.com/uc?id=${bookId}&export=download`
+        } else {
+            alert('გადმოსაწერად გთხოვთ დარეგისტრირდეთ ;-;')
+        }
+    }
+
     return (
         <div className="ui card book-card" style={{margin: '7px'}}>
             <div className="image">
@@ -46,8 +54,8 @@ const BookCard = ({title, desc, imgLink, bookId}) => {
                 <button className={`ui button icon ${ bookmarkLogo ? '' : 'pink' }`} onClick={bookmark}>
                     <i className="icon bookmark"></i>
                 </button>
-                <a className="ui button right floated" target={'_blank'} href={`https://drive.google.com/file/d/${bookId}/view?usp=sharing`}>Open</a>
-                <a className="ui button green right floated" href={`https://drive.google.com/uc?id=${bookId}&export=download`}>Download</a>
+                <a className="ui button right floated" target={'_blank'} href={`https://drive.google.com/file/d/${bookId}/view?usp=sharing`}>გახსნა</a>
+                <button className="ui button icon green right floated" onClick={downloadRedirect}><i className="icon download"></i></button>
             </div>
         </div>
     )

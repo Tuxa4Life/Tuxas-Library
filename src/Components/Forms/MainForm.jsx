@@ -24,8 +24,8 @@ const MainForm = () => {
     }
 
     return (
-        <div style={styles} className="ui container">
-            <h3 style={{marginTop: '10px'}}>To continue service, please</h3>
+        <div style={styles} className="ui f-container">
+            <h3 style={{marginTop: '10px'}}>სერვისის გასაგრძელებლად გთხოვთ,</h3>
             { renderForms () }
             <div className="hr-wrapper">
                 <hr />
